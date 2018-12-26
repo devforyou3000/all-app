@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AllApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'bootstrap.min.css', media: 'all' %>
+    <%= stylesheet_link_tag 'style.css', media: 'all' %>
+    <%= stylesheet_link_tag 'default.css', media: 'all' %>
+  </head>
+
+  <body>
+    <div class="row">
+      <%= render "shared/navigation" %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
+    <div class="row">
+      <%= yield %>
+    </div>
+    
+  </body>
+</html>
